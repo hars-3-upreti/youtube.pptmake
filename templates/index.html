@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video to PowerPoint</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+
+</head>
+<body>
+    <div class="container">
+        <h2>YouTube Video to PowerPoint</h2>
+        <form action="/process" method="post" enctype="multipart/form-data" class="form">
+            <div class="form-group">
+                <label for="youtube_link">YouTube Video Link:</label>
+                <input type="text" name="youtube_link" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="folder_name">Folder Name:</label>
+                <input type="text" name="folder_name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="ppt_name">PowerPoint Presentation Name:</label>
+                <input type="text" name="ppt_name" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Generate PowerPoint">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
